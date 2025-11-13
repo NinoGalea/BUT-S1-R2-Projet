@@ -26,9 +26,13 @@ header {
             rgba(206, 43, 55, 1) 100%);
 
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+header>p {
+    margin: 0;
 }
 
 
@@ -41,10 +45,16 @@ h1, h2 {
 
 h1 {
     font-size: 50px;
+    margin: 0;
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 40px;
+    margin: 10px 25px;
+}
+
+h3, h4 {
+    margin: 5px 0;
 }
 
 main {
@@ -87,7 +97,38 @@ main {
     max-height: calc(200px * 2/3);
     overflow: hidden;
 }
+.pizzabox>p {
+    text-align: center;
+}
 
 #pizzas>button {
-    width: 100%;
+    width: calc(100% - 50px);
+    height: 3rem;
+    margin: auto;
+    font-size: 1rem;
+    
+    border: none;
+    border-radius: 10px;
+    background-color: #00000000;
+    transition-duration: 300ms;
+}
+#pizzas>button:hover {
+    background-color: #f3eddc;
+}
+
+#horaires {
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+
+    width: 200px;
+}
+
+#horaires>h3 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+#horaires>div {
+    padding: 5px;
 }
