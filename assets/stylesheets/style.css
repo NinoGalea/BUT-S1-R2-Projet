@@ -6,8 +6,8 @@
 
 body {
     margin: 0;
-    background-color: #fffcf4;
-    background-image: linear-gradient(180deg, #00000000 100px, #fffcf4 800px), url('../images/Canadian.jpeg');
+    background-color: #f4efe3;
+    background-image: linear-gradient(180deg, #00000000 100px, #f4efe3 800px), url('../images/Canadian.jpeg');
     background-size: cover;
     background-position: center 100px;
     background-repeat: no-repeat;
@@ -36,7 +36,8 @@ header>p {
 }
 
 
-h1, h2 {
+h1,
+h2 {
     font-family: 'Imperial Script';
     font-weight: 100;
     color: #000000;
@@ -50,10 +51,11 @@ h1 {
 
 h2 {
     font-size: 40px;
-    margin: 10px 25px;
+    margin: 30px 0;
 }
 
-h3, h4 {
+h3,
+h4 {
     margin: 5px 0;
 }
 
@@ -62,41 +64,51 @@ main {
     margin: auto;
     top: 400px;
     position: relative;
-    background-color: #fffcf4;
-    height: 1000px;
+    background-color: #f4efe3;
+    border-radius: 10px;
+    padding: 20px;
 }
 
-#avis, #pizzas>.pizzas {
+#avis>#listeAvis,
+#pizzas>.pizzas {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: stretch
 }
 
-#avis>.avis {
+.avis {
     padding: 10px;
     margin: 10px 0;
     border-radius: 10px;
     width: 350px;
     background-color: #eeeeee;
     box-shadow: 5px 5px 5px #e9e9e9;
+    transition-duration: 200ms;
 }
 
-#avis>.avis>div {
+.avis:hover {
+    transform: translate(-5px, -5px);
+}
+
+.avis>div {
     display: flex;
 }
 
 #pizzas {}
 
 .pizzabox {
-    width: 200px;
+    width: 300px;
     overflow: hidden;
 }
+
 .pizzabox>img {
     width: inherit;
-    max-height: calc(200px * 2/3);
+    max-height: calc(300px * 2/3);
     overflow: hidden;
+    border-radius: 10px;
 }
+
 .pizzabox>p {
     text-align: center;
 }
@@ -106,14 +118,15 @@ main {
     height: 3rem;
     margin: auto;
     font-size: 1rem;
-    
+
     border: none;
     border-radius: 10px;
-    background-color: #00000000;
+    background-color: #dfdacc;
     transition-duration: 300ms;
 }
+
 #pizzas>button:hover {
-    background-color: #f3eddc;
+    background-color: #e6dbbd;
 }
 
 #horaires {
@@ -129,6 +142,7 @@ main {
     grid-column-end: 3;
     text-align: center;
 }
+
 #horaires>div {
     padding: 5px;
 }
