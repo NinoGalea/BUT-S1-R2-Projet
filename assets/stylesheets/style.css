@@ -74,7 +74,8 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .avis {
@@ -95,26 +96,42 @@ main {
     display: flex;
 }
 
-#pizzas {}
-
 .pizzabox {
     width: 300px;
+    height: 350px;
     overflow: hidden;
+    background-color: #dfdacc;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .pizzabox>img {
     width: inherit;
-    max-height: calc(300px * 2/3);
+    height: calc(300px * 2/3);
+    width: 100%;
     overflow: hidden;
     border-radius: 10px;
 }
 
 .pizzabox>p {
     text-align: center;
+    margin: 0;
+}
+
+#pizzas>.pizzas {
+    gap: 10px;
+    overflow: hidden;
+    height: 350px;
+    transition-duration: 1s;
+}
+
+#pizzas>.pizzas[data-state="opened"] {
+    height: 100%;
 }
 
 #pizzas>button {
-    width: calc(100% - 50px);
+    width: 100%;
     height: 3rem;
     margin: auto;
     font-size: 1rem;
@@ -123,6 +140,8 @@ main {
     border-radius: 10px;
     background-color: #dfdacc;
     transition-duration: 300ms;
+
+    margin-top: 10px;
 }
 
 #pizzas>button:hover {

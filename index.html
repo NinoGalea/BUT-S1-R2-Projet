@@ -7,6 +7,8 @@
     <title>La Trattoria</title>
 
     <link rel="stylesheet" href="./assets/stylesheets/style.css">
+
+    <script src="assets/scripts/pizzasDropdown.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +23,7 @@
         <!-- Pizzas -->
         <section id="pizzas">
             <h2 style="margin-top: 0;">Nos pizzas</h2>
-            <div class="pizzas">
+            <div data-state="closed" class="pizzas">
                 <div class="pizzabox">
                     <img src="./assets/images/3Fromages.jpeg" alt="3 fromages">
                     <h3>3 fromages</h3>
@@ -39,6 +41,18 @@
                     <h3>Paysanne</h3>
                     <h4>13,00 €</h4>
                     <p>Tomate, bacon, chèvre, fromage, noix de crème fraîche, olive</p>
+                </div>
+                <div class="pizzabox">
+                    <img src="./assets/images/Canadian.jpeg" alt="Canadian">
+                    <h3>Canadian</h3>
+                    <h4>13,50 €</h4>
+                    <p>Crème fraîche, haché, merguez, champignon, fromage, olive</p>
+                </div>
+                <div class="pizzabox">
+                    <img src="./assets/images/Chorizo.jpeg" alt="Chorizo">
+                    <h3>Chorizo</h3>
+                    <h4>12,00 €</h4>
+                    <p>Tomate, chorizo, champignon, fromage, poivron, olive</p>
                 </div>
             </div>
             <button>Voir toutes nos pizzas</button>
